@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nocturne — Privacy Policy</title>
+<style>
+  :root {
+    --night-deep: #0b0e1a;
+    --twilight: #2c2a4a;
+    --amber: #ffb870;
+    --ink: #1b1c26;
+    --ink-dim: #5b5f72;
+    --paper: #fbfaf8;
+    --line: #e7e5e0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(135deg, var(--twilight), var(--night-deep));
+    padding: 48px 24px 40px;
+    color: #eef0fb;
+  }
+  .header-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    margin-bottom: 18px;
+  }
+  .brand-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #fff7e6, var(--amber) 60%, #e8925a 100%);
+    box-shadow: 0 0 10px rgba(255, 184, 112, 0.6);
+  }
+  h1 {
+    margin: 0 0 8px;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+  .effective-date {
+    color: rgba(238, 240, 251, 0.7);
+    font-size: 14px;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  h2 {
+    font-size: 19px;
+    margin: 40px 0 12px;
+    padding-top: 4px;
+  }
+  h2:first-of-type { margin-top: 0; }
+  p { margin: 0 0 14px; color: var(--ink); }
+  .lede {
+    font-size: 17px;
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--amber);
+    padding: 16px 18px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 20px;
+    font-size: 14.5px;
+  }
+  th, td {
+    text-align: left;
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  th {
+    color: var(--ink-dim);
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+  .contact {
+    margin-top: 6px;
+    font-weight: 600;
+  }
+  footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+    color: var(--ink-dim);
+    font-size: 13px;
+  }
+  a { color: #b5651d; text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand"><span class="brand-dot"></span><span>Nocturne</span></div>
+    <h1>Privacy Policy</h1>
+    <div class="effective-date">Effective date: August 9, 2026</div>
+  </div>
+</header>
+
+<main>
+  <p class="lede">
+    Nocturne does not collect, transmit, sell, or share any of your data. It has no server,
+    no analytics, and no network calls of any kind. Everything it does happens entirely
+    inside your own browser.
+  </p>
+
+  <h2>What data Nocturne stores, and where</h2>
+  <p>Nocturne saves a small set of preferences so it can remember how you like your screen to look:</p>
+
+  <table>
+    <tr><th>Setting</th><th>Example value</th><th>Purpose</th></tr>
+    <tr><td>Enabled / disabled</td><td><code>true</code></td><td>Whether the effect is currently on</td></tr>
+    <tr><td>Mode</td><td><code>"auto"</code> or <code>"manual"</code></td><td>Automatic day curve vs. your own settings</td></tr>
+    <tr><td>Manual warmth</td><td><code>3400</code> (Kelvin)</td><td>Your chosen color temperature, if in manual mode</td></tr>
+    <tr><td>Manual brightness</td><td><code>0.9</code></td><td>Your chosen brightness, if in manual mode</td></tr>
+    <tr><td>Effect strength</td><td><code>0.65</code></td><td>How strong the overall effect is</td></tr>
+  </table>
+
+  <p>These are stored using Chrome's built-in <code>storage.sync</code> API, which means:</p>
+  <p>
+    The data is saved <strong>locally in your browser profile</strong>. If you're signed into
+    Chrome, this small settings object may be synced by Google across your own signed-in
+    devices — the same as your bookmarks or browser preferences — but Nocturne itself never
+    sends it anywhere. Nocturne has no backend server and cannot access this data itself.
+    No one, including us, can see your settings.
+  </p>
+  <p>
+    Nocturne does <strong>not</strong> collect: your browsing history, page content,
+    keystrokes, personal information, location, health information, financial information,
+    or any other identifiable data. It does not use cookies, trackers, or analytics of any kind.
+  </p>
+
+  <h2>Why Nocturne requests the permissions it does</h2>
+  <table>
+    <tr><th>Permission</th><th>What it's for</th></tr>
+    <tr><td>Storage</td><td>Saving your warmth/brightness/mode preferences (see table above)</td></tr>
+    <tr><td>Alarms</td><td>Refreshing the toolbar badge icon once a minute so it reflects the current time of day</td></tr>
+    <tr><td>Host permissions (all sites)</td><td>Applying the color/brightness filter to whichever page you're viewing. Nocturne only changes the visual rendering of the page — it does not read, log, or transmit page content anywhere</td></tr>
+  </table>
+
+  <h2>Third parties</h2>
+  <p>
+    Nocturne does not integrate with, or share data with, any third-party service,
+    advertiser, or analytics provider. There is nothing to opt out of, because nothing is
+    ever sent out.
+  </p>
+
+  <h2>Children's privacy</h2>
+  <p>Nocturne does not knowingly collect any information from anyone, including children, because it does not collect information at all.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    If this policy ever changes — for example, if a future version adds a genuinely new
+    feature that touches data handling — we'll update the effective date above and describe
+    the change here.
+  </p>
+
+  <h2>Contact</h2>
+  <p class="contact">ra.hulbasak789@example.com</p>
+</main>
+
+<footer>
+  Nocturne — a browser extension for time-aware screen color.
+</footer>
+
+</body>
+</html>
